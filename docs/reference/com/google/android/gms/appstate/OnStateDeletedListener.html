@@ -106,6 +106,13 @@ type="text/css">
 </script>
 <script src="../../../../../../assets/js/docs.js" type="text/javascript"></script>
 
+<!-- RESOURCES LIBRARY -->
+<script src="http://androiddevdocs-staging.appspot.com/ytblogger_lists_unified.js" type="text/javascript"></script>
+<script src="../../../../../../jd_lists_unified.js" type="text/javascript"></script>
+<script src="../../../../../../assets/js/jd_tag_helpers.js" type="text/javascript"></script>
+<link href="../../../../../../assets/css/resourcecards.css"  rel="stylesheet" type="text/css" />
+<script src="../../../../../../assets/js/resourcecards.js" type="text/javascript"></script>
+
 <script type="text/javascript">
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-5831155-1']);
@@ -427,6 +434,8 @@ onkeyup="return search_changed(event, false, '../../../../../../')" />
     <li class="api apilevel-">
   <a href="../../../../../../reference/com/google/android/gms/auth/package-summary.html">com.google.android.gms.auth</a></li>
     <li class="api apilevel-">
+  <a href="../../../../../../reference/com/google/android/gms/cast/package-summary.html">com.google.android.gms.cast</a></li>
+    <li class="api apilevel-">
   <a href="../../../../../../reference/com/google/android/gms/common/package-summary.html">com.google.android.gms.common</a></li>
     <li class="api apilevel-">
   <a href="../../../../../../reference/com/google/android/gms/common/annotation/package-summary.html">com.google.android.gms.common.annotation</a></li>
@@ -488,6 +497,11 @@ onkeyup="return search_changed(event, false, '../../../../../../')" />
     <li><h2>Interfaces</h2>
       <ul>
           <li class="api apilevel-"><a href="../../../../../../reference/com/google/android/gms/appstate/AppState.html">AppState</a></li>
+          <li class="api apilevel-"><a href="../../../../../../reference/com/google/android/gms/appstate/AppStateManager.StateConflictResult.html">AppStateManager.StateConflictResult</a></li>
+          <li class="api apilevel-"><a href="../../../../../../reference/com/google/android/gms/appstate/AppStateManager.StateDeletedResult.html">AppStateManager.StateDeletedResult</a></li>
+          <li class="api apilevel-"><a href="../../../../../../reference/com/google/android/gms/appstate/AppStateManager.StateListResult.html">AppStateManager.StateListResult</a></li>
+          <li class="api apilevel-"><a href="../../../../../../reference/com/google/android/gms/appstate/AppStateManager.StateLoadedResult.html">AppStateManager.StateLoadedResult</a></li>
+          <li class="api apilevel-"><a href="../../../../../../reference/com/google/android/gms/appstate/AppStateManager.StateResult.html">AppStateManager.StateResult</a></li>
           <li class="api apilevel-"><a href="../../../../../../reference/com/google/android/gms/appstate/OnSignOutCompleteListener.html">OnSignOutCompleteListener</a></li>
           <li class="selected api apilevel-"><a href="../../../../../../reference/com/google/android/gms/appstate/OnStateDeletedListener.html">OnStateDeletedListener</a></li>
           <li class="api apilevel-"><a href="../../../../../../reference/com/google/android/gms/appstate/OnStateListLoadedListener.html">OnStateListLoadedListener</a></li>
@@ -500,6 +514,8 @@ onkeyup="return search_changed(event, false, '../../../../../../')" />
           <li class="api apilevel-"><a href="../../../../../../reference/com/google/android/gms/appstate/AppStateBuffer.html">AppStateBuffer</a></li>
           <li class="api apilevel-"><a href="../../../../../../reference/com/google/android/gms/appstate/AppStateClient.html">AppStateClient</a></li>
           <li class="api apilevel-"><a href="../../../../../../reference/com/google/android/gms/appstate/AppStateClient.Builder.html">AppStateClient.Builder</a></li>
+          <li class="api apilevel-"><a href="../../../../../../reference/com/google/android/gms/appstate/AppStateManager.html">AppStateManager</a></li>
+          <li class="api apilevel-"><a href="../../../../../../reference/com/google/android/gms/appstate/AppStateStatusCodes.html">AppStateStatusCodes</a></li>
       </ul>
     </li>
               
@@ -610,11 +626,15 @@ onkeyup="return search_changed(event, false, '../../../../../../')" />
 
 
 <div class="jd-descr">
+<p>
+  <p class="caution"><strong>
+      This interface is deprecated.</strong><br/>
+    See <code><a href="../../../../../../reference/com/google/android/gms/appstate/AppStateManager.StateDeletedResult.html">AppStateManager.StateDeletedResult</a></code>.
 
+  </p>
 
 <h2>Class Overview</h2>
-<p itemprop="articleBody">Listener for receiving callbacks when app state data has been deleted.
-</p>
+<p itemprop="articleBody">Listener for receiving callbacks when app state data has been deleted.</p>
 
 
 
@@ -764,12 +784,12 @@ onkeyup="return search_changed(event, false, '../../../../../../')" />
       
   <div class="jd-tagdata jd-tagdescr"><p>Called when app state data has been deleted. Possible status codes include:
  <ul>
- <li><code><a href="../../../../../../reference/com/google/android/gms/appstate/AppStateClient.html#STATUS_OK">STATUS_OK</a></code> if data was successfully deleted from the server.</li>
- <li><code><a href="../../../../../../reference/com/google/android/gms/appstate/AppStateClient.html#STATUS_NETWORK_ERROR_OPERATION_FAILED">STATUS_NETWORK_ERROR_OPERATION_FAILED</a></code> if the device was unable to
+ <li><code><a href="../../../../../../reference/com/google/android/gms/appstate/AppStateStatusCodes.html#STATUS_OK">STATUS_OK</a></code> if data was successfully deleted from the server.</li>
+ <li><code><a href="../../../../../../reference/com/google/android/gms/appstate/AppStateStatusCodes.html#STATUS_NETWORK_ERROR_OPERATION_FAILED">STATUS_NETWORK_ERROR_OPERATION_FAILED</a></code> if the device was unable to
  communicate with the network. In this case, the operation is not retried automatically.</li>
- <li><code><a href="../../../../../../reference/com/google/android/gms/appstate/AppStateClient.html#STATUS_CLIENT_RECONNECT_REQUIRED">STATUS_CLIENT_RECONNECT_REQUIRED</a></code> if the client needs to reconnect
+ <li><code><a href="../../../../../../reference/com/google/android/gms/appstate/AppStateStatusCodes.html#STATUS_CLIENT_RECONNECT_REQUIRED">STATUS_CLIENT_RECONNECT_REQUIRED</a></code> if the client needs to reconnect
  to the service to access this data.</li>
- <li><code><a href="../../../../../../reference/com/google/android/gms/appstate/AppStateClient.html#STATUS_INTERNAL_ERROR">STATUS_INTERNAL_ERROR</a></code> if an unexpected error occurred in the
+ <li><code><a href="../../../../../../reference/com/google/android/gms/appstate/AppStateStatusCodes.html#STATUS_INTERNAL_ERROR">STATUS_INTERNAL_ERROR</a></code> if an unexpected error occurred in the
  service.</li>
  </ul></p></div>
   <div class="jd-tagdata">

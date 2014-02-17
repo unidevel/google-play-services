@@ -8,6 +8,7 @@ com.google.android.gms.ads.mediation.customevent
 com.google.android.gms.ads.search
 com.google.android.gms.appstate
 com.google.android.gms.auth
+com.google.android.gms.cast
 com.google.android.gms.common
 com.google.android.gms.common.annotation
 com.google.android.gms.common.api

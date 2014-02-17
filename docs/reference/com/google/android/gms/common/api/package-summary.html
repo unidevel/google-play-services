@@ -106,6 +106,13 @@ type="text/css">
 </script>
 <script src="../../../../../../../assets/js/docs.js" type="text/javascript"></script>
 
+<!-- RESOURCES LIBRARY -->
+<script src="http://androiddevdocs-staging.appspot.com/ytblogger_lists_unified.js" type="text/javascript"></script>
+<script src="../../../../../../../jd_lists_unified.js" type="text/javascript"></script>
+<script src="../../../../../../../assets/js/jd_tag_helpers.js" type="text/javascript"></script>
+<link href="../../../../../../../assets/css/resourcecards.css"  rel="stylesheet" type="text/css" />
+<script src="../../../../../../../assets/js/resourcecards.js" type="text/javascript"></script>
+
 <script type="text/javascript">
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-5831155-1']);
@@ -428,6 +435,8 @@ onkeyup="return search_changed(event, false, '../../../../../../../')" />
     <li class="api apilevel-">
   <a href="../../../../../../../reference/com/google/android/gms/auth/package-summary.html">com.google.android.gms.auth</a></li>
     <li class="api apilevel-">
+  <a href="../../../../../../../reference/com/google/android/gms/cast/package-summary.html">com.google.android.gms.cast</a></li>
+    <li class="api apilevel-">
   <a href="../../../../../../../reference/com/google/android/gms/common/package-summary.html">com.google.android.gms.common</a></li>
     <li class="api apilevel-">
   <a href="../../../../../../../reference/com/google/android/gms/common/annotation/package-summary.html">com.google.android.gms.common.annotation</a></li>
@@ -494,12 +503,14 @@ onkeyup="return search_changed(event, false, '../../../../../../../')" />
         <li class="api apilevel-"><a href="../../../../../../../reference/com/google/android/gms/common/api/PendingResult.html">PendingResult</a></li>
         <li class="api apilevel-"><a href="../../../../../../../reference/com/google/android/gms/common/api/Releasable.html">Releasable</a></li>
         <li class="api apilevel-"><a href="../../../../../../../reference/com/google/android/gms/common/api/Result.html">Result</a></li>
+        <li class="api apilevel-"><a href="../../../../../../../reference/com/google/android/gms/common/api/ResultCallback.html">ResultCallback</a></li>
       </ul>
     </li>
               
     <li><h2>Classes</h2>
       <ul>
         <li class="api apilevel-"><a href="../../../../../../../reference/com/google/android/gms/common/api/Api.html">Api</a></li>
+        <li class="api apilevel-"><a href="../../../../../../../reference/com/google/android/gms/common/api/CommonStatusCodes.html">CommonStatusCodes</a></li>
         <li class="api apilevel-"><a href="../../../../../../../reference/com/google/android/gms/common/api/GoogleApiClient.html">GoogleApiClient</a></li>
         <li class="api apilevel-"><a href="../../../../../../../reference/com/google/android/gms/common/api/GoogleApiClient.Builder.html">GoogleApiClient.Builder</a></li>
         <li class="api apilevel-"><a href="../../../../../../../reference/com/google/android/gms/common/api/Scope.html">Scope</a></li>
@@ -603,7 +614,7 @@ onkeyup="return search_changed(event, false, '../../../../../../../')" />
  connect the client to the service.&nbsp;</td>
           </tr>
         <tr class=" api apilevel-" >
-              <td class="jd-linkcol"><a href="../../../../../../../reference/com/google/android/gms/common/api/PendingResult.html">PendingResult</a>&lt;R&nbsp;extends&nbsp;<a href="../../../../../../../reference/com/google/android/gms/common/api/Result.html">Result</a>,&nbsp;C&gt;</td>
+              <td class="jd-linkcol"><a href="../../../../../../../reference/com/google/android/gms/common/api/PendingResult.html">PendingResult</a>&lt;R&nbsp;extends&nbsp;<a href="../../../../../../../reference/com/google/android/gms/common/api/Result.html">Result</a>&gt;</td>
               <td class="jd-descrcol" width="100%">Represents a pending result from calling an API method in Google Play services.&nbsp;</td>
           </tr>
         <tr class="alt-color api apilevel-" >
@@ -614,6 +625,11 @@ onkeyup="return search_changed(event, false, '../../../../../../../')" />
         <tr class=" api apilevel-" >
               <td class="jd-linkcol"><a href="../../../../../../../reference/com/google/android/gms/common/api/Result.html">Result</a></td>
               <td class="jd-descrcol" width="100%">Represents the final result of invoking an API method in Google Play Services.&nbsp;</td>
+          </tr>
+        <tr class="alt-color api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../../../../reference/com/google/android/gms/common/api/ResultCallback.html">ResultCallback</a>&lt;R&nbsp;extends&nbsp;<a href="../../../../../../../reference/com/google/android/gms/common/api/Result.html">Result</a>&gt;</td>
+              <td class="jd-descrcol" width="100%">An interface for receiving a <code><a href="../../../../../../../reference/com/google/android/gms/common/api/Result.html">Result</a></code> from a <code><a href="../../../../../../../reference/com/google/android/gms/common/api/PendingResult.html">PendingResult</a></code> as an asynchronous
+ callback.&nbsp;</td>
           </tr>
   </table>
     </div>
@@ -630,18 +646,22 @@ onkeyup="return search_changed(event, false, '../../../../../../../')" />
               <td class="jd-descrcol" width="100%">Describes a section of the Google Play Services API that should be made available.&nbsp;</td>
           </tr>
         <tr class=" api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../../../../reference/com/google/android/gms/common/api/CommonStatusCodes.html">CommonStatusCodes</a></td>
+              <td class="jd-descrcol" width="100%">Common status codes that are often shared across API surfaces.&nbsp;</td>
+          </tr>
+        <tr class="alt-color api apilevel-" >
               <td class="jd-linkcol"><a href="../../../../../../../reference/com/google/android/gms/common/api/GoogleApiClient.html">GoogleApiClient</a></td>
               <td class="jd-descrcol" width="100%">The main entry point for Google Play services integration.&nbsp;</td>
           </tr>
-        <tr class="alt-color api apilevel-" >
+        <tr class=" api apilevel-" >
               <td class="jd-linkcol"><a href="../../../../../../../reference/com/google/android/gms/common/api/GoogleApiClient.Builder.html">GoogleApiClient.Builder</a></td>
               <td class="jd-descrcol" width="100%">Builder to configure a <code><a href="../../../../../../../reference/com/google/android/gms/common/api/GoogleApiClient.html">GoogleApiClient</a></code>.&nbsp;</td>
           </tr>
-        <tr class=" api apilevel-" >
+        <tr class="alt-color api apilevel-" >
               <td class="jd-linkcol"><a href="../../../../../../../reference/com/google/android/gms/common/api/Scope.html">Scope</a></td>
               <td class="jd-descrcol" width="100%">Describes an OAuth 2.0 scope to request.&nbsp;</td>
           </tr>
-        <tr class="alt-color api apilevel-" >
+        <tr class=" api apilevel-" >
               <td class="jd-linkcol"><a href="../../../../../../../reference/com/google/android/gms/common/api/Status.html">Status</a></td>
               <td class="jd-descrcol" width="100%">Represents the results of work.&nbsp;</td>
           </tr>

@@ -39,6 +39,8 @@ import android.widget.Toast;
 public class LoginFragment extends Fragment implements
         OnClickListener, ConnectionCallbacks, OnConnectionFailedListener {
 
+    private static final String WALLET_SANDBOX_SCOPE =
+            "https://www.googleapis.com/auth/paymentssandbox.make_payments";
     // UI elements
     private ProgressDialog mProgressDialog;
 
@@ -50,8 +52,8 @@ public class LoginFragment extends Fragment implements
         super.onCreate(savedInstanceState);
 
         mPlusClient = new PlusClient.Builder(getActivity(), this, this)
-                .setScopes(Scopes.PLUS_LOGIN,
-                        "https://www.googleapis.com/auth/paymentssandbox.make_payments")
+                .setScopes(Scopes.PLUS_ME,
+                        WALLET_SANDBOX_SCOPE)
                 .build();
 
         setRetainInstance(true);

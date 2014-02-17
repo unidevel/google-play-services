@@ -106,6 +106,13 @@ type="text/css">
 </script>
 <script src="../../../../../../assets/js/docs.js" type="text/javascript"></script>
 
+<!-- RESOURCES LIBRARY -->
+<script src="http://androiddevdocs-staging.appspot.com/ytblogger_lists_unified.js" type="text/javascript"></script>
+<script src="../../../../../../jd_lists_unified.js" type="text/javascript"></script>
+<script src="../../../../../../assets/js/jd_tag_helpers.js" type="text/javascript"></script>
+<link href="../../../../../../assets/css/resourcecards.css"  rel="stylesheet" type="text/css" />
+<script src="../../../../../../assets/js/resourcecards.js" type="text/javascript"></script>
+
 <script type="text/javascript">
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-5831155-1']);
@@ -427,6 +434,8 @@ onkeyup="return search_changed(event, false, '../../../../../../')" />
     <li class="api apilevel-">
   <a href="../../../../../../reference/com/google/android/gms/auth/package-summary.html">com.google.android.gms.auth</a></li>
     <li class="api apilevel-">
+  <a href="../../../../../../reference/com/google/android/gms/cast/package-summary.html">com.google.android.gms.cast</a></li>
+    <li class="api apilevel-">
   <a href="../../../../../../reference/com/google/android/gms/common/package-summary.html">com.google.android.gms.common</a></li>
     <li class="api apilevel-">
   <a href="../../../../../../reference/com/google/android/gms/common/annotation/package-summary.html">com.google.android.gms.common.annotation</a></li>
@@ -487,6 +496,12 @@ onkeyup="return search_changed(event, false, '../../../../../../')" />
               
     <li><h2>Interfaces</h2>
       <ul>
+          <li class="api apilevel-"><a href="../../../../../../reference/com/google/android/gms/plus/Account.html">Account</a></li>
+          <li class="api apilevel-"><a href="../../../../../../reference/com/google/android/gms/plus/Moments.html">Moments</a></li>
+          <li class="api apilevel-"><a href="../../../../../../reference/com/google/android/gms/plus/Moments.LoadMomentsResult.html">Moments.LoadMomentsResult</a></li>
+          <li class="api apilevel-"><a href="../../../../../../reference/com/google/android/gms/plus/People.html">People</a></li>
+          <li class="api apilevel-"><a href="../../../../../../reference/com/google/android/gms/plus/People.LoadPeopleResult.html">People.LoadPeopleResult</a></li>
+          <li class="api apilevel-"><a href="../../../../../../reference/com/google/android/gms/plus/People.OrderBy.html">People.OrderBy</a></li>
           <li class="api apilevel-"><a href="../../../../../../reference/com/google/android/gms/plus/PlusClient.OnAccessRevokedListener.html">PlusClient.OnAccessRevokedListener</a></li>
           <li class="api apilevel-"><a href="../../../../../../reference/com/google/android/gms/plus/PlusClient.OnMomentsLoadedListener.html">PlusClient.OnMomentsLoadedListener</a></li>
           <li class="api apilevel-"><a href="../../../../../../reference/com/google/android/gms/plus/PlusClient.OnPeopleLoadedListener.html">PlusClient.OnPeopleLoadedListener</a></li>
@@ -497,6 +512,9 @@ onkeyup="return search_changed(event, false, '../../../../../../')" />
               
     <li><h2>Classes</h2>
       <ul>
+          <li class="api apilevel-"><a href="../../../../../../reference/com/google/android/gms/plus/Plus.html">Plus</a></li>
+          <li class="api apilevel-"><a href="../../../../../../reference/com/google/android/gms/plus/Plus.PlusOptions.html">Plus.PlusOptions</a></li>
+          <li class="api apilevel-"><a href="../../../../../../reference/com/google/android/gms/plus/Plus.PlusOptions.Builder.html">Plus.PlusOptions.Builder</a></li>
           <li class="api apilevel-"><a href="../../../../../../reference/com/google/android/gms/plus/PlusClient.html">PlusClient</a></li>
           <li class="api apilevel-"><a href="../../../../../../reference/com/google/android/gms/plus/PlusClient.Builder.html">PlusClient.Builder</a></li>
           <li class="api apilevel-"><a href="../../../../../../reference/com/google/android/gms/plus/PlusOneButton.html">PlusOneButton</a></li>
@@ -766,7 +784,8 @@ Summary:
         
         <div class="jd-descrdiv"><em>
       This constructor is deprecated.
-    Please migrate to <code><a href="../../../../../../">ERROR(/#Builder(Activity))</a></code>, the PlusClient is optional.
+    Please migrate to <code><a href="../../../../../../reference/com/google/android/gms/plus/PlusShare.Builder.html#PlusShare.Builder(android.app.Activity)">PlusShare.Builder(Activity)</a></code>,
+ the PlusClient is optional.
 </em></div>
   
   </td></tr>
@@ -906,8 +925,8 @@ Summary:
         <td class="jd-linkcol" width="100%"><nobr>
         <span class="sympad"><a href="../../../../../../reference/com/google/android/gms/plus/PlusShare.Builder.html#setRecipients(java.util.List<com.google.android.gms.plus.model.people.Person>)">setRecipients</a></span>(List&lt;<a href="../../../../../../reference/com/google/android/gms/plus/model/people/Person.html">Person</a>&gt; recipientList)</nobr>
         
-        <div class="jd-descrdiv">Deprecated, use the constructor <code><a href="../../../../../../">ERROR(/#Builder(Activity))</a></code> and call
- <code><a href="../../../../../../">ERROR(/#setRecipients(Person, List<Person>))</a></code>.</div>
+        <div class="jd-descrdiv">Deprecated, use the constructor <code><a href="../../../../../../reference/com/google/android/gms/plus/PlusShare.Builder.html#PlusShare.Builder(android.app.Activity)">PlusShare.Builder(Activity)</a></code> and call
+ <code><a href="../../../../../../reference/com/google/android/gms/plus/PlusShare.Builder.html#setRecipients(com.google.android.gms.plus.model.people.Person, java.util.List<com.google.android.gms.plus.model.people.Person>)">setRecipients(Person, List<Person>)</a></code>.</div>
   
   </td></tr>
 
@@ -1337,7 +1356,8 @@ From class
       <p>
   <p class="caution"><strong>
       This constructor is deprecated.</strong><br/>
-    Please migrate to <code><a href="../../../../../../">ERROR(/#Builder(Activity))</a></code>, the PlusClient is optional.
+    Please migrate to <code><a href="../../../../../../reference/com/google/android/gms/plus/PlusShare.Builder.html#PlusShare.Builder(android.app.Activity)">PlusShare.Builder(Activity)</a></code>,
+ the PlusClient is optional.
 
   </p>
   <div class="jd-tagdata jd-tagdescr"><p></p></div>
@@ -1669,8 +1689,8 @@ From class
       </div>
     <div class="jd-details-descr">
       
-  <div class="jd-tagdata jd-tagdescr"><p>Deprecated, use the constructor <code><a href="../../../../../../">ERROR(/#Builder(Activity))</a></code> and call
- <code><a href="../../../../../../">ERROR(/#setRecipients(Person, List<Person>))</a></code>. Sets a list of people
+  <div class="jd-tagdata jd-tagdescr"><p>Deprecated, use the constructor <code><a href="../../../../../../reference/com/google/android/gms/plus/PlusShare.Builder.html#PlusShare.Builder(android.app.Activity)">PlusShare.Builder(Activity)</a></code> and call
+ <code><a href="../../../../../../reference/com/google/android/gms/plus/PlusShare.Builder.html#setRecipients(com.google.android.gms.plus.model.people.Person, java.util.List<com.google.android.gms.plus.model.people.Person>)">setRecipients(Person, List<Person>)</a></code>. Sets a list of people
  to send the interactive post to.
 
  <p>This sets the initial people to share with, but the user can change who the post
@@ -1728,7 +1748,7 @@ From class
         <tr>
           <th>user</td>
           <td>The user to send the post as, see
-         <code><a href="../../../../../../">ERROR(/People#getCurrentPerson(com.google.android.gms.GoogleApiClient))</a></code>.</td>
+         <code><a href="../../../../../../reference/com/google/android/gms/plus/People.html#getCurrentPerson(com.google.android.gms.common.api.GoogleApiClient)">getCurrentPerson(com.google.android.gms.common.api.GoogleApiClient)</a></code>.</td>
         </tr>
         <tr>
           <th>recipientList</td>

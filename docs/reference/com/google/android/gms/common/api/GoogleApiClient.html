@@ -106,6 +106,13 @@ type="text/css">
 </script>
 <script src="../../../../../../../assets/js/docs.js" type="text/javascript"></script>
 
+<!-- RESOURCES LIBRARY -->
+<script src="http://androiddevdocs-staging.appspot.com/ytblogger_lists_unified.js" type="text/javascript"></script>
+<script src="../../../../../../../jd_lists_unified.js" type="text/javascript"></script>
+<script src="../../../../../../../assets/js/jd_tag_helpers.js" type="text/javascript"></script>
+<link href="../../../../../../../assets/css/resourcecards.css"  rel="stylesheet" type="text/css" />
+<script src="../../../../../../../assets/js/resourcecards.js" type="text/javascript"></script>
+
 <script type="text/javascript">
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-5831155-1']);
@@ -427,6 +434,8 @@ onkeyup="return search_changed(event, false, '../../../../../../../')" />
     <li class="api apilevel-">
   <a href="../../../../../../../reference/com/google/android/gms/auth/package-summary.html">com.google.android.gms.auth</a></li>
     <li class="api apilevel-">
+  <a href="../../../../../../../reference/com/google/android/gms/cast/package-summary.html">com.google.android.gms.cast</a></li>
+    <li class="api apilevel-">
   <a href="../../../../../../../reference/com/google/android/gms/common/package-summary.html">com.google.android.gms.common</a></li>
     <li class="api apilevel-">
   <a href="../../../../../../../reference/com/google/android/gms/common/annotation/package-summary.html">com.google.android.gms.common.annotation</a></li>
@@ -493,12 +502,14 @@ onkeyup="return search_changed(event, false, '../../../../../../../')" />
           <li class="api apilevel-"><a href="../../../../../../../reference/com/google/android/gms/common/api/PendingResult.html">PendingResult</a></li>
           <li class="api apilevel-"><a href="../../../../../../../reference/com/google/android/gms/common/api/Releasable.html">Releasable</a></li>
           <li class="api apilevel-"><a href="../../../../../../../reference/com/google/android/gms/common/api/Result.html">Result</a></li>
+          <li class="api apilevel-"><a href="../../../../../../../reference/com/google/android/gms/common/api/ResultCallback.html">ResultCallback</a></li>
       </ul>
     </li>
               
     <li><h2>Classes</h2>
       <ul>
           <li class="api apilevel-"><a href="../../../../../../../reference/com/google/android/gms/common/api/Api.html">Api</a></li>
+          <li class="api apilevel-"><a href="../../../../../../../reference/com/google/android/gms/common/api/CommonStatusCodes.html">CommonStatusCodes</a></li>
           <li class="selected api apilevel-"><a href="../../../../../../../reference/com/google/android/gms/common/api/GoogleApiClient.html">GoogleApiClient</a></li>
           <li class="api apilevel-"><a href="../../../../../../../reference/com/google/android/gms/common/api/GoogleApiClient.Builder.html">GoogleApiClient.Builder</a></li>
           <li class="api apilevel-"><a href="../../../../../../../reference/com/google/android/gms/common/api/Scope.html">Scope</a></li>
@@ -670,7 +681,7 @@ Summary:
  <p>
  Before any operation is executed, the GoogleApiClient must be connected using the
  <code><a href="../../../../../../../reference/com/google/android/gms/common/api/GoogleApiClient.html#connect()">connect()</a></code> method. The client is not considered connected until the
- <code><a href="../../../../../../../reference/com/google/android/gms/common/GooglePlayServicesClient.ConnectionCallbacks.html#onConnected(android.os.Bundle)">onConnected(Bundle)</a></code> callback has been called.
+ <code><a href="../../../../../../../reference/com/google/android/gms/common/api/GoogleApiClient.ConnectionCallbacks.html#onConnected(android.os.Bundle)">onConnected(Bundle)</a></code> callback has been called.
  <p>
  When your app is done using this client, call <code><a href="../../../../../../../reference/com/google/android/gms/common/api/GoogleApiClient.html#disconnect()">disconnect()</a></code>, even if the async result from
  <code><a href="../../../../../../../reference/com/google/android/gms/common/api/GoogleApiClient.html#connect()">connect()</a></code> has not yet been delivered.
@@ -1280,7 +1291,7 @@ From class
       
   <div class="jd-tagdata jd-tagdescr"><p>Connects the client to Google Play services. This method returns immediately, and connects to
  the service in the background. If the connection is successful,
- <code><a href="../../../../../../../reference/com/google/android/gms/common/GooglePlayServicesClient.ConnectionCallbacks.html#onConnected(android.os.Bundle)">onConnected(Bundle)</a></code> is called and enqueued items are executed. On a
+ <code><a href="../../../../../../../reference/com/google/android/gms/common/api/GoogleApiClient.ConnectionCallbacks.html#onConnected(android.os.Bundle)">onConnected(Bundle)</a></code> is called and enqueued items are executed. On a
  failure, <code><a href="../../../../../../../reference/com/google/android/gms/common/GooglePlayServicesClient.OnConnectionFailedListener.html#onConnectionFailed(com.google.android.gms.common.ConnectionResult)">onConnectionFailed(ConnectionResult)</a></code> is called.
 </p></div>
 
@@ -1521,7 +1532,7 @@ From class
  service in the background.
  <p>
  After calling this method, your application will receive
- <code><a href="../../../../../../../reference/com/google/android/gms/common/GooglePlayServicesClient.ConnectionCallbacks.html#onConnected(android.os.Bundle)">onConnected(Bundle)</a></code> if the connection is successful, or
+ <code><a href="../../../../../../../reference/com/google/android/gms/common/api/GoogleApiClient.ConnectionCallbacks.html#onConnected(android.os.Bundle)">onConnected(Bundle)</a></code> if the connection is successful, or
  <code><a href="../../../../../../../reference/com/google/android/gms/common/GooglePlayServicesClient.OnConnectionFailedListener.html#onConnectionFailed(com.google.android.gms.common.ConnectionResult)">onConnectionFailed(ConnectionResult)</a></code> if the connection failed.</p></div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">See Also</h5>
@@ -1557,14 +1568,14 @@ From class
     <div class="jd-details-descr">
       
   <div class="jd-tagdata jd-tagdescr"><p>Registers a listener to receive connection events from this <code>GoogleApiClient</code>.
- If the service is already connected, the listener's <code><a href="../../../../../../../reference/com/google/android/gms/common/GooglePlayServicesClient.ConnectionCallbacks.html#onConnected(android.os.Bundle)">onConnected(Bundle)</a></code>
+ If the service is already connected, the listener's <code><a href="../../../../../../../reference/com/google/android/gms/common/api/GoogleApiClient.ConnectionCallbacks.html#onConnected(android.os.Bundle)">onConnected(Bundle)</a></code>
  method will be called immediately.  Applications should balance calls to this method with
  calls to <code><a href="../../../../../../../reference/com/google/android/gms/common/api/GoogleApiClient.html#unregisterConnectionCallbacks(com.google.android.gms.common.api.GoogleApiClient.ConnectionCallbacks)">unregisterConnectionCallbacks(ConnectionCallbacks)</a></code> to avoid leaking
  resources.
  <p>
  If the specified listener is already registered to receive connection events, this
  method will not add a duplicate entry for the same listener, but <strong>will</strong>
- still call the listener's <code><a href="../../../../../../../reference/com/google/android/gms/common/GooglePlayServicesClient.ConnectionCallbacks.html#onConnected(android.os.Bundle)">onConnected(Bundle)</a></code> method if currently
+ still call the listener's <code><a href="../../../../../../../reference/com/google/android/gms/common/api/GoogleApiClient.ConnectionCallbacks.html#onConnected(android.os.Bundle)">onConnected(Bundle)</a></code> method if currently
  connected.
  <p>
  Note that the order of messages received here may not be stable, so clients should not rely

@@ -17,6 +17,7 @@
 package com.google.android.gms.samples.wallet;
 
 import com.google.android.gms.wallet.MaskedWallet;
+import com.google.android.gms.wallet.Wallet;
 import com.google.android.gms.wallet.WalletClient;
 import com.google.android.gms.wallet.WalletConstants;
 
@@ -213,7 +214,7 @@ public class PaymentFragment extends XyzWalletFragment implements OnClickListene
         switch (requestCode) {
             case REQUEST_CODE_RESOLVE_ERR:
                 if (resultCode == Activity.RESULT_OK) {
-                    mWalletClient.connect();
+                    mGoogleApiClient.connect();
                 } else {
                     handleUnrecoverableGoogleWalletError(errorCode);
                 }
@@ -266,11 +267,12 @@ public class PaymentFragment extends XyzWalletFragment implements OnClickListene
 
     private void getMaskedWallet() {
         if (mRequestCode == REQUEST_CODE_RESOLVE_CHANGE_MASKED_WALLET) {
-            mWalletClient.changeMaskedWallet(mMaskedWallet.getGoogleTransactionId(),
+            Wallet.changeMaskedWallet(mGoogleApiClient, mMaskedWallet.getGoogleTransactionId(),
                     mMaskedWallet.getMerchantTransactionId(), mRequestCode);
         } else {
             ItemInfo itemInfo = Constants.ITEMS_FOR_SALE[mItemId];
-            mWalletClient.loadMaskedWallet(WalletUtil.createMaskedWalletRequest(itemInfo),
+            Wallet.loadMaskedWallet(mGoogleApiClient,
+                    WalletUtil.createMaskedWalletRequest(itemInfo),
                     REQUEST_CODE_RESOLVE_LOAD_MASKED_WALLET);
         }
     }

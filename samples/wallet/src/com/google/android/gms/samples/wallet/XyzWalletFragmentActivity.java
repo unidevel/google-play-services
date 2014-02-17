@@ -4,7 +4,6 @@ import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.wallet.FullWalletRequest;
 import com.google.android.gms.wallet.MaskedWalletRequest;
 import com.google.android.gms.wallet.WalletClient;
-import com.google.android.gms.wallet.WalletConstants;
 
 import android.app.Activity;
 import android.content.Intent;

@@ -16,15 +16,17 @@
 
 package com.google.android.gms.samples.wallet;
 
+import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.common.api.GoogleApiClient.ConnectionCallbacks;
+import com.google.android.gms.common.api.GoogleApiClient.OnConnectionFailedListener;
 import com.google.android.gms.common.ConnectionResult;
-import com.google.android.gms.common.GooglePlayServicesClient.ConnectionCallbacks;
-import com.google.android.gms.common.GooglePlayServicesClient.OnConnectionFailedListener;
 import com.google.android.gms.common.GooglePlayServicesUtil;
 import com.google.android.gms.wallet.FullWalletRequest;
 import com.google.android.gms.wallet.MaskedWalletRequest;
-import com.google.android.gms.wallet.WalletClient;
+import com.google.android.gms.wallet.Wallet;
 import com.google.android.gms.wallet.WalletConstants;
 
+import android.app.Activity;
 import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
@@ -36,7 +38,6 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.support.v4.app.Fragment;
-import android.widget.Toast;
 
 import java.lang.ref.WeakReference;
 
@@ -80,7 +81,7 @@ public abstract class XyzWalletFragment extends Fragment implements ConnectionCa
     // handler for processing retry attempts
     private RetryHandler mRetryHandler;
 
-    protected WalletClient mWalletClient;
+    protected GoogleApiClient mGoogleApiClient;
     protected ProgressDialog mProgressDialog;
     // whether the user tried to do an action that requires a masked wallet (i.e.: loadMaskedWallet)
     // before a masked wallet was acquired (i.e. still waiting for mWalletClient to connect)
@@ -106,9 +107,16 @@ public abstract class XyzWalletFragment extends Fragment implements ConnectionCa
 
         String accountName = ((XyzApplication) getActivity().getApplication()).getAccountName();
 
-        // Set up a wallet client
-        mWalletClient = new WalletClient(getActivity(), Constants.WALLET_ENVIRONMENT, accountName,
-                WalletConstants.THEME_HOLO_LIGHT, this, this);
+        // Set up an API client;
+        mGoogleApiClient = new GoogleApiClient.Builder(getActivity())
+                .addConnectionCallbacks(this)
+                .addOnConnectionFailedListener(this)
+                .setAccountName(accountName)
+                .addApi(Wallet.API, new Wallet.WalletOptions.Builder()
+                    .setEnvironment(Constants.WALLET_ENVIRONMENT)
+                    .setTheme(WalletConstants.THEME_HOLO_LIGHT)
+                    .build())
+                .build();
 
         mRetryHandler = new RetryHandler(this);
     }
@@ -118,7 +126,7 @@ public abstract class XyzWalletFragment extends Fragment implements ConnectionCa
         super.onStart();
 
         // Connect to Google Play Services
-        mWalletClient.connect();
+        mGoogleApiClient.connect();
     }
 
     @Override
@@ -126,7 +134,7 @@ public abstract class XyzWalletFragment extends Fragment implements ConnectionCa
         super.onStop();
 
         // Disconnect from Google Play Services
-        mWalletClient.disconnect();
+        mGoogleApiClient.disconnect();
 
         if (mProgressDialog != null) {
             mProgressDialog.dismiss();
@@ -142,7 +150,7 @@ public abstract class XyzWalletFragment extends Fragment implements ConnectionCa
     }
 
     @Override
-    public void onDisconnected() {
+    public void onConnectionSuspended(int cause) {
         // don't need to do anything here
         // subclasses may override if they need to do anything
     }
@@ -182,7 +190,7 @@ public abstract class XyzWalletFragment extends Fragment implements ConnectionCa
                     @Override
                     public void onCancel(DialogInterface dialog) {
                         // get a new connection result
-                        mWalletClient.connect();
+                        mGoogleApiClient.connect();
                     }
                 });
 
@@ -262,7 +270,7 @@ public abstract class XyzWalletFragment extends Fragment implements ConnectionCa
                 case MESSAGE_RETRY_CONNECTION:
                     XyzWalletFragment walletFragment = mWeakReference.get();
                     if (walletFragment != null) {
-                        walletFragment.mWalletClient.connect();
+                        walletFragment.mGoogleApiClient.connect();
                     }
                     break;
             }

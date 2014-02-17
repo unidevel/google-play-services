@@ -106,6 +106,13 @@ type="text/css">
 </script>
 <script src="../../../../../../assets/js/docs.js" type="text/javascript"></script>
 
+<!-- RESOURCES LIBRARY -->
+<script src="http://androiddevdocs-staging.appspot.com/ytblogger_lists_unified.js" type="text/javascript"></script>
+<script src="../../../../../../jd_lists_unified.js" type="text/javascript"></script>
+<script src="../../../../../../assets/js/jd_tag_helpers.js" type="text/javascript"></script>
+<link href="../../../../../../assets/css/resourcecards.css"  rel="stylesheet" type="text/css" />
+<script src="../../../../../../assets/js/resourcecards.js" type="text/javascript"></script>
+
 <script type="text/javascript">
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-5831155-1']);
@@ -427,6 +434,8 @@ onkeyup="return search_changed(event, false, '../../../../../../')" />
     <li class="api apilevel-">
   <a href="../../../../../../reference/com/google/android/gms/auth/package-summary.html">com.google.android.gms.auth</a></li>
     <li class="api apilevel-">
+  <a href="../../../../../../reference/com/google/android/gms/cast/package-summary.html">com.google.android.gms.cast</a></li>
+    <li class="api apilevel-">
   <a href="../../../../../../reference/com/google/android/gms/common/package-summary.html">com.google.android.gms.common</a></li>
     <li class="api apilevel-">
   <a href="../../../../../../reference/com/google/android/gms/common/annotation/package-summary.html">com.google.android.gms.common.annotation</a></li>
@@ -488,6 +497,11 @@ onkeyup="return search_changed(event, false, '../../../../../../')" />
     <li><h2>Interfaces</h2>
       <ul>
           <li class="api apilevel-"><a href="../../../../../../reference/com/google/android/gms/appstate/AppState.html">AppState</a></li>
+          <li class="api apilevel-"><a href="../../../../../../reference/com/google/android/gms/appstate/AppStateManager.StateConflictResult.html">AppStateManager.StateConflictResult</a></li>
+          <li class="api apilevel-"><a href="../../../../../../reference/com/google/android/gms/appstate/AppStateManager.StateDeletedResult.html">AppStateManager.StateDeletedResult</a></li>
+          <li class="api apilevel-"><a href="../../../../../../reference/com/google/android/gms/appstate/AppStateManager.StateListResult.html">AppStateManager.StateListResult</a></li>
+          <li class="api apilevel-"><a href="../../../../../../reference/com/google/android/gms/appstate/AppStateManager.StateLoadedResult.html">AppStateManager.StateLoadedResult</a></li>
+          <li class="api apilevel-"><a href="../../../../../../reference/com/google/android/gms/appstate/AppStateManager.StateResult.html">AppStateManager.StateResult</a></li>
           <li class="api apilevel-"><a href="../../../../../../reference/com/google/android/gms/appstate/OnSignOutCompleteListener.html">OnSignOutCompleteListener</a></li>
           <li class="api apilevel-"><a href="../../../../../../reference/com/google/android/gms/appstate/OnStateDeletedListener.html">OnStateDeletedListener</a></li>
           <li class="api apilevel-"><a href="../../../../../../reference/com/google/android/gms/appstate/OnStateListLoadedListener.html">OnStateListLoadedListener</a></li>
@@ -500,6 +514,8 @@ onkeyup="return search_changed(event, false, '../../../../../../')" />
           <li class="api apilevel-"><a href="../../../../../../reference/com/google/android/gms/appstate/AppStateBuffer.html">AppStateBuffer</a></li>
           <li class="selected api apilevel-"><a href="../../../../../../reference/com/google/android/gms/appstate/AppStateClient.html">AppStateClient</a></li>
           <li class="api apilevel-"><a href="../../../../../../reference/com/google/android/gms/appstate/AppStateClient.Builder.html">AppStateClient.Builder</a></li>
+          <li class="api apilevel-"><a href="../../../../../../reference/com/google/android/gms/appstate/AppStateManager.html">AppStateManager</a></li>
+          <li class="api apilevel-"><a href="../../../../../../reference/com/google/android/gms/appstate/AppStateStatusCodes.html">AppStateStatusCodes</a></li>
       </ul>
     </li>
               
@@ -670,11 +686,15 @@ Summary:
 
 
 <div class="jd-descr">
+<p>
+  <p class="caution"><strong>
+      This class is deprecated.</strong><br/>
+    See <code><a href="../../../../../../reference/com/google/android/gms/appstate/AppStateManager.html">AppStateManager</a></code> and <code><a href="../../../../../../reference/com/google/android/gms/common/api/GoogleApiClient.html">GoogleApiClient</a></code>.
 
+  </p>
 
 <h2>Class Overview</h2>
-<p itemprop="articleBody">Main public API entry point for the AppState client.
-</p>
+<p itemprop="articleBody">Main public API entry point for the AppState client.</p>
 
 
 
@@ -717,7 +737,10 @@ Summary:
         
         class</nobr></td>
       <td class="jd-linkcol"><a href="../../../../../../reference/com/google/android/gms/appstate/AppStateClient.Builder.html">AppStateClient.Builder</a></td>
-      <td class="jd-descrcol" width="100%">Builder class for AppStateClient.&nbsp;</td>
+      <td class="jd-descrcol" width="100%"><em>
+      This class is deprecated.
+    See <code><a href="../../../../../../reference/com/google/android/gms/common/api/GoogleApiClient.Builder.html">GoogleApiClient.Builder</a></code>.
+</em>&nbsp;</td>
     </tr>
     
     
@@ -865,7 +888,10 @@ Summary:
         <td class="jd-linkcol" width="100%"><nobr>
         <span class="sympad"><a href="../../../../../../reference/com/google/android/gms/appstate/AppStateClient.html#connect()">connect</a></span>()</nobr>
         
-        <div class="jd-descrdiv">Connect to the app state service.</div>
+        <div class="jd-descrdiv"><em>
+      This method is deprecated.
+    See <code><a href="../../../../../../reference/com/google/android/gms/common/api/GoogleApiClient.html#disconnect()">disconnect()</a></code>.
+</em></div>
   
   </td></tr>
 
@@ -883,7 +909,10 @@ Summary:
         <td class="jd-linkcol" width="100%"><nobr>
         <span class="sympad"><a href="../../../../../../reference/com/google/android/gms/appstate/AppStateClient.html#deleteState(com.google.android.gms.appstate.OnStateDeletedListener, int)">deleteState</a></span>(<a href="../../../../../../reference/com/google/android/gms/appstate/OnStateDeletedListener.html">OnStateDeletedListener</a> listener, int stateKey)</nobr>
         
-        <div class="jd-descrdiv">Delete the state data for the current app.</div>
+        <div class="jd-descrdiv"><em>
+      This method is deprecated.
+    See <code><a href="../../../../../../reference/com/google/android/gms/appstate/AppStateManager.html#delete(com.google.android.gms.common.api.GoogleApiClient, int)">delete(GoogleApiClient, int)</a></code>.
+</em></div>
   
   </td></tr>
 
@@ -901,7 +930,10 @@ Summary:
         <td class="jd-linkcol" width="100%"><nobr>
         <span class="sympad"><a href="../../../../../../reference/com/google/android/gms/appstate/AppStateClient.html#disconnect()">disconnect</a></span>()</nobr>
         
-        <div class="jd-descrdiv">Closes the connection to Google Play services.</div>
+        <div class="jd-descrdiv"><em>
+      This method is deprecated.
+    See <code><a href="../../../../../../reference/com/google/android/gms/common/api/GoogleApiClient.html#disconnect()">disconnect()</a></code>.
+</em></div>
   
   </td></tr>
 
@@ -919,7 +951,10 @@ Summary:
         <td class="jd-linkcol" width="100%"><nobr>
         <span class="sympad"><a href="../../../../../../reference/com/google/android/gms/appstate/AppStateClient.html#getMaxNumKeys()">getMaxNumKeys</a></span>()</nobr>
         
-        <div class="jd-descrdiv">Gets the maximum number of keys that an app can store data in simultaneously.</div>
+        <div class="jd-descrdiv"><em>
+      This method is deprecated.
+    See <code><a href="../../../../../../reference/com/google/android/gms/appstate/AppStateManager.html#getMaxNumKeys(com.google.android.gms.common.api.GoogleApiClient)">getMaxNumKeys(GoogleApiClient)</a></code>.
+</em></div>
   
   </td></tr>
 
@@ -937,7 +972,10 @@ Summary:
         <td class="jd-linkcol" width="100%"><nobr>
         <span class="sympad"><a href="../../../../../../reference/com/google/android/gms/appstate/AppStateClient.html#getMaxStateSize()">getMaxStateSize</a></span>()</nobr>
         
-        <div class="jd-descrdiv">Gets the maximum app state size per state key in bytes.</div>
+        <div class="jd-descrdiv"><em>
+      This method is deprecated.
+    See <code><a href="../../../../../../reference/com/google/android/gms/appstate/AppStateManager.html#getMaxStateSize(com.google.android.gms.common.api.GoogleApiClient)">getMaxStateSize(GoogleApiClient)</a></code>.
+</em></div>
   
   </td></tr>
 
@@ -955,8 +993,10 @@ Summary:
         <td class="jd-linkcol" width="100%"><nobr>
         <span class="sympad"><a href="../../../../../../reference/com/google/android/gms/appstate/AppStateClient.html#isConnected()">isConnected</a></span>()</nobr>
         
-        <div class="jd-descrdiv">Checks if the client is currently connected to the service, so that
- requests to other methods will succeed.</div>
+        <div class="jd-descrdiv"><em>
+      This method is deprecated.
+    See <code><a href="../../../../../../reference/com/google/android/gms/common/api/GoogleApiClient.html#isConnected()">isConnected()</a></code>.
+</em></div>
   
   </td></tr>
 
@@ -974,7 +1014,10 @@ Summary:
         <td class="jd-linkcol" width="100%"><nobr>
         <span class="sympad"><a href="../../../../../../reference/com/google/android/gms/appstate/AppStateClient.html#isConnecting()">isConnecting</a></span>()</nobr>
         
-        <div class="jd-descrdiv">Checks if the client is attempting to connect to the service.</div>
+        <div class="jd-descrdiv"><em>
+      This method is deprecated.
+    See <code><a href="../../../../../../reference/com/google/android/gms/common/api/GoogleApiClient.html#isConnecting()">isConnecting()</a></code>.
+</em></div>
   
   </td></tr>
 
@@ -992,8 +1035,10 @@ Summary:
         <td class="jd-linkcol" width="100%"><nobr>
         <span class="sympad"><a href="../../../../../../reference/com/google/android/gms/appstate/AppStateClient.html#isConnectionCallbacksRegistered(com.google.android.gms.common.GooglePlayServicesClient.ConnectionCallbacks)">isConnectionCallbacksRegistered</a></span>(<a href="../../../../../../reference/com/google/android/gms/common/GooglePlayServicesClient.ConnectionCallbacks.html">GooglePlayServicesClient.ConnectionCallbacks</a> listener)</nobr>
         
-        <div class="jd-descrdiv">Returns true if the specified listener is currently registered to
- receive connection events.</div>
+        <div class="jd-descrdiv"><em>
+      This method is deprecated.
+    See <code><a href="../../../../../../reference/com/google/android/gms/common/api/GoogleApiClient.html#isConnectionCallbacksRegistered(com.google.android.gms.common.api.GoogleApiClient.ConnectionCallbacks)">isConnectionCallbacksRegistered(GoogleApiClient.ConnectionCallbacks)</a></code>.
+</em></div>
   
   </td></tr>
 
@@ -1011,8 +1056,10 @@ Summary:
         <td class="jd-linkcol" width="100%"><nobr>
         <span class="sympad"><a href="../../../../../../reference/com/google/android/gms/appstate/AppStateClient.html#isConnectionFailedListenerRegistered(com.google.android.gms.common.GooglePlayServicesClient.OnConnectionFailedListener)">isConnectionFailedListenerRegistered</a></span>(<a href="../../../../../../reference/com/google/android/gms/common/GooglePlayServicesClient.OnConnectionFailedListener.html">GooglePlayServicesClient.OnConnectionFailedListener</a> listener)</nobr>
         
-        <div class="jd-descrdiv">Returns true if the specified listener is currently registered to
- receive connection failed events.</div>
+        <div class="jd-descrdiv"><em>
+      This method is deprecated.
+    See <code><a href="../../../../../../reference/com/google/android/gms/common/api/GoogleApiClient.html#isConnectionFailedListenerRegistered(com.google.android.gms.common.api.GoogleApiClient.OnConnectionFailedListener)">isConnectionFailedListenerRegistered(GoogleApiClient.OnConnectionFailedListener)</a></code>.
+</em></div>
   
   </td></tr>
 
@@ -1030,7 +1077,10 @@ Summary:
         <td class="jd-linkcol" width="100%"><nobr>
         <span class="sympad"><a href="../../../../../../reference/com/google/android/gms/appstate/AppStateClient.html#listStates(com.google.android.gms.appstate.OnStateListLoadedListener)">listStates</a></span>(<a href="../../../../../../reference/com/google/android/gms/appstate/OnStateListLoadedListener.html">OnStateListLoadedListener</a> listener)</nobr>
         
-        <div class="jd-descrdiv">Asynchronously lists all the saved states for the current app.</div>
+        <div class="jd-descrdiv"><em>
+      This method is deprecated.
+    See <code><a href="../../../../../../reference/com/google/android/gms/appstate/AppStateManager.html#list(com.google.android.gms.common.api.GoogleApiClient)">list(GoogleApiClient)</a></code>.
+</em></div>
   
   </td></tr>
 
@@ -1048,7 +1098,10 @@ Summary:
         <td class="jd-linkcol" width="100%"><nobr>
         <span class="sympad"><a href="../../../../../../reference/com/google/android/gms/appstate/AppStateClient.html#loadState(com.google.android.gms.appstate.OnStateLoadedListener, int)">loadState</a></span>(<a href="../../../../../../reference/com/google/android/gms/appstate/OnStateLoadedListener.html">OnStateLoadedListener</a> listener, int stateKey)</nobr>
         
-        <div class="jd-descrdiv">Asynchronously loads saved state for the current app.</div>
+        <div class="jd-descrdiv"><em>
+      This method is deprecated.
+    See <code><a href="../../../../../../reference/com/google/android/gms/appstate/AppStateManager.html#load(com.google.android.gms.common.api.GoogleApiClient, int)">load(GoogleApiClient, int)</a></code>.
+</em></div>
   
   </td></tr>
 
@@ -1066,7 +1119,10 @@ Summary:
         <td class="jd-linkcol" width="100%"><nobr>
         <span class="sympad"><a href="../../../../../../reference/com/google/android/gms/appstate/AppStateClient.html#reconnect()">reconnect</a></span>()</nobr>
         
-        <div class="jd-descrdiv">Closes the current connection to Google Play services and creates a new connection.</div>
+        <div class="jd-descrdiv"><em>
+      This method is deprecated.
+    See <code><a href="../../../../../../reference/com/google/android/gms/common/api/GoogleApiClient.html#reconnect()">reconnect()</a></code>
+</em></div>
   
   </td></tr>
 
@@ -1084,7 +1140,10 @@ Summary:
         <td class="jd-linkcol" width="100%"><nobr>
         <span class="sympad"><a href="../../../../../../reference/com/google/android/gms/appstate/AppStateClient.html#registerConnectionCallbacks(com.google.android.gms.common.GooglePlayServicesClient.ConnectionCallbacks)">registerConnectionCallbacks</a></span>(<a href="../../../../../../reference/com/google/android/gms/common/GooglePlayServicesClient.ConnectionCallbacks.html">GooglePlayServicesClient.ConnectionCallbacks</a> listener)</nobr>
         
-        <div class="jd-descrdiv">Registers a listener to receive connection events from this <code>GooglePlayServicesClient</code>.</div>
+        <div class="jd-descrdiv"><em>
+      This method is deprecated.
+    See <code><a href="../../../../../../reference/com/google/android/gms/common/api/GoogleApiClient.html#registerConnectionCallbacks(com.google.android.gms.common.api.GoogleApiClient.ConnectionCallbacks)">registerConnectionCallbacks(GoogleApiClient.ConnectionCallbacks)</a></code>.
+</em></div>
   
   </td></tr>
 
@@ -1102,8 +1161,10 @@ Summary:
         <td class="jd-linkcol" width="100%"><nobr>
         <span class="sympad"><a href="../../../../../../reference/com/google/android/gms/appstate/AppStateClient.html#registerConnectionFailedListener(com.google.android.gms.common.GooglePlayServicesClient.OnConnectionFailedListener)">registerConnectionFailedListener</a></span>(<a href="../../../../../../reference/com/google/android/gms/common/GooglePlayServicesClient.OnConnectionFailedListener.html">GooglePlayServicesClient.OnConnectionFailedListener</a> listener)</nobr>
         
-        <div class="jd-descrdiv">Registers a listener to receive connection failed events from this
- <code>GooglePlayServicesClient</code>.</div>
+        <div class="jd-descrdiv"><em>
+      This method is deprecated.
+    See <code><a href="../../../../../../reference/com/google/android/gms/common/api/GoogleApiClient.html#registerConnectionFailedListener(com.google.android.gms.common.api.GoogleApiClient.OnConnectionFailedListener)">registerConnectionFailedListener(GoogleApiClient.OnConnectionFailedListener)</a></code>.
+</em></div>
   
   </td></tr>
 
@@ -1121,7 +1182,10 @@ Summary:
         <td class="jd-linkcol" width="100%"><nobr>
         <span class="sympad"><a href="../../../../../../reference/com/google/android/gms/appstate/AppStateClient.html#resolveState(com.google.android.gms.appstate.OnStateLoadedListener, int, java.lang.String, byte[])">resolveState</a></span>(<a href="../../../../../../reference/com/google/android/gms/appstate/OnStateLoadedListener.html">OnStateLoadedListener</a> listener, int stateKey, String resolvedVersion, byte[] resolvedData)</nobr>
         
-        <div class="jd-descrdiv">Resolve a previously detected conflict in app state data.</div>
+        <div class="jd-descrdiv"><em>
+      This method is deprecated.
+    See <code><a href="../../../../../../reference/com/google/android/gms/appstate/AppStateManager.html#resolve(com.google.android.gms.common.api.GoogleApiClient, int, java.lang.String, byte[])">resolve(GoogleApiClient, int, String, byte[])</a></code>.
+</em></div>
   
   </td></tr>
 
@@ -1139,7 +1203,10 @@ Summary:
         <td class="jd-linkcol" width="100%"><nobr>
         <span class="sympad"><a href="../../../../../../reference/com/google/android/gms/appstate/AppStateClient.html#signOut(com.google.android.gms.appstate.OnSignOutCompleteListener)">signOut</a></span>(<a href="../../../../../../reference/com/google/android/gms/appstate/OnSignOutCompleteListener.html">OnSignOutCompleteListener</a> listener)</nobr>
         
-        <div class="jd-descrdiv">Asynchronously signs the current user out.</div>
+        <div class="jd-descrdiv"><em>
+      This method is deprecated.
+    See <code><a href="../../../../../../reference/com/google/android/gms/appstate/AppStateManager.html#signOut(com.google.android.gms.common.api.GoogleApiClient)">signOut(GoogleApiClient)</a></code>.
+</em></div>
   
   </td></tr>
 
@@ -1157,7 +1224,10 @@ Summary:
         <td class="jd-linkcol" width="100%"><nobr>
         <span class="sympad"><a href="../../../../../../reference/com/google/android/gms/appstate/AppStateClient.html#signOut()">signOut</a></span>()</nobr>
         
-        <div class="jd-descrdiv">Asynchronously signs the current user out.</div>
+        <div class="jd-descrdiv"><em>
+      This method is deprecated.
+    See <code><a href="../../../../../../reference/com/google/android/gms/appstate/AppStateManager.html#signOut(com.google.android.gms.common.api.GoogleApiClient)">signOut(GoogleApiClient)</a></code>.
+</em></div>
   
   </td></tr>
 
@@ -1175,7 +1245,10 @@ Summary:
         <td class="jd-linkcol" width="100%"><nobr>
         <span class="sympad"><a href="../../../../../../reference/com/google/android/gms/appstate/AppStateClient.html#unregisterConnectionCallbacks(com.google.android.gms.common.GooglePlayServicesClient.ConnectionCallbacks)">unregisterConnectionCallbacks</a></span>(<a href="../../../../../../reference/com/google/android/gms/common/GooglePlayServicesClient.ConnectionCallbacks.html">GooglePlayServicesClient.ConnectionCallbacks</a> listener)</nobr>
         
-        <div class="jd-descrdiv">Removes a connection listener from this <code>GooglePlayServicesClient</code>.</div>
+        <div class="jd-descrdiv"><em>
+      This method is deprecated.
+    See <code><a href="../../../../../../reference/com/google/android/gms/common/api/GoogleApiClient.html#unregisterConnectionCallbacks(com.google.android.gms.common.api.GoogleApiClient.ConnectionCallbacks)">unregisterConnectionCallbacks(GoogleApiClient.ConnectionCallbacks)</a></code>.
+</em></div>
   
   </td></tr>
 
@@ -1193,7 +1266,10 @@ Summary:
         <td class="jd-linkcol" width="100%"><nobr>
         <span class="sympad"><a href="../../../../../../reference/com/google/android/gms/appstate/AppStateClient.html#unregisterConnectionFailedListener(com.google.android.gms.common.GooglePlayServicesClient.OnConnectionFailedListener)">unregisterConnectionFailedListener</a></span>(<a href="../../../../../../reference/com/google/android/gms/common/GooglePlayServicesClient.OnConnectionFailedListener.html">GooglePlayServicesClient.OnConnectionFailedListener</a> listener)</nobr>
         
-        <div class="jd-descrdiv">Removes a connection failed listener from the <code>GooglePlayServicesClient</code>.</div>
+        <div class="jd-descrdiv"><em>
+      This method is deprecated.
+    See <code><a href="../../../../../../reference/com/google/android/gms/common/api/GoogleApiClient.html#unregisterConnectionFailedListener(com.google.android.gms.common.api.GoogleApiClient.OnConnectionFailedListener)">unregisterConnectionFailedListener(GoogleApiClient.OnConnectionFailedListener)</a></code>.
+</em></div>
   
   </td></tr>
 
@@ -1211,7 +1287,10 @@ Summary:
         <td class="jd-linkcol" width="100%"><nobr>
         <span class="sympad"><a href="../../../../../../reference/com/google/android/gms/appstate/AppStateClient.html#updateState(int, byte[])">updateState</a></span>(int stateKey, byte[] data)</nobr>
         
-        <div class="jd-descrdiv">Updates app state for the current app.</div>
+        <div class="jd-descrdiv"><em>
+      This method is deprecated.
+    See <code><a href="../../../../../../reference/com/google/android/gms/appstate/AppStateManager.html#update(com.google.android.gms.common.api.GoogleApiClient, int, byte[])">update(GoogleApiClient, int, byte[])</a></code>.
+</em></div>
   
   </td></tr>
 
@@ -1229,7 +1308,10 @@ Summary:
         <td class="jd-linkcol" width="100%"><nobr>
         <span class="sympad"><a href="../../../../../../reference/com/google/android/gms/appstate/AppStateClient.html#updateStateImmediate(com.google.android.gms.appstate.OnStateLoadedListener, int, byte[])">updateStateImmediate</a></span>(<a href="../../../../../../reference/com/google/android/gms/appstate/OnStateLoadedListener.html">OnStateLoadedListener</a> listener, int stateKey, byte[] data)</nobr>
         
-        <div class="jd-descrdiv">Updates app state for the current app.</div>
+        <div class="jd-descrdiv"><em>
+      This method is deprecated.
+    See <code><a href="../../../../../../reference/com/google/android/gms/appstate/AppStateManager.html#updateImmediate(com.google.android.gms.common.api.GoogleApiClient, int, byte[])">updateImmediate(GoogleApiClient, int, byte[])</a></code>.
+</em></div>
   
   </td></tr>
 
@@ -2212,7 +2294,12 @@ From interface
 
       </div>
     <div class="jd-details-descr">
-      
+      <p>
+  <p class="caution"><strong>
+      This method is deprecated.</strong><br/>
+    See <code><a href="../../../../../../reference/com/google/android/gms/common/api/GoogleApiClient.html#disconnect()">disconnect()</a></code>.
+
+  </p>
   <div class="jd-tagdata jd-tagdescr"><p>Connect to the app state service. This method will return immediately, and
  <code><a href="../../../../../../reference/com/google/android/gms/common/GooglePlayServicesClient.ConnectionCallbacks.html#onConnected(android.os.Bundle)">onConnected(Bundle)</a></code> will be called if the
  connection is successful.</p></div>
@@ -2248,7 +2335,12 @@ From interface
 
       </div>
     <div class="jd-details-descr">
-      
+      <p>
+  <p class="caution"><strong>
+      This method is deprecated.</strong><br/>
+    See <code><a href="../../../../../../reference/com/google/android/gms/appstate/AppStateManager.html#delete(com.google.android.gms.common.api.GoogleApiClient, int)">delete(GoogleApiClient, int)</a></code>.
+
+  </p>
   <div class="jd-tagdata jd-tagdescr"><p>Delete the state data for the current app. This method will delete all data associated with
  the provided key, as well as removing the key itself.
  <p>
@@ -2266,8 +2358,7 @@ From interface
         <tr>
           <th>stateKey</td>
           <td>The key to clear data for. Must be a non-negative integer less than
-            <code><a href="../../../../../../reference/com/google/android/gms/appstate/AppStateClient.html#getMaxNumKeys()">getMaxNumKeys()</a></code>.
-</td>
+            <code><a href="../../../../../../reference/com/google/android/gms/appstate/AppStateClient.html#getMaxNumKeys()">getMaxNumKeys()</a></code>.</td>
         </tr>
       </table>
   </div>
@@ -2298,7 +2389,12 @@ From interface
 
       </div>
     <div class="jd-details-descr">
-      
+      <p>
+  <p class="caution"><strong>
+      This method is deprecated.</strong><br/>
+    See <code><a href="../../../../../../reference/com/google/android/gms/common/api/GoogleApiClient.html#disconnect()">disconnect()</a></code>.
+
+  </p>
   <div class="jd-tagdata jd-tagdescr"><p>Closes the connection to Google Play services. No calls can be made on this object
  after calling this method.</p></div>
 
@@ -2328,7 +2424,12 @@ From interface
 
       </div>
     <div class="jd-details-descr">
-      
+      <p>
+  <p class="caution"><strong>
+      This method is deprecated.</strong><br/>
+    See <code><a href="../../../../../../reference/com/google/android/gms/appstate/AppStateManager.html#getMaxNumKeys(com.google.android.gms.common.api.GoogleApiClient)">getMaxNumKeys(GoogleApiClient)</a></code>.
+
+  </p>
   <div class="jd-tagdata jd-tagdescr"><p>Gets the maximum number of keys that an app can store data in simultaneously.
  <p>
  If the service cannot be reached for some reason, this will return
@@ -2336,8 +2437,7 @@ From interface
  attempted until after the client has reconnected.</p></div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Returns</h5>
-      <ul class="nolist"><li>The maximum number of keys that an app can use for data.
-</li></ul>
+      <ul class="nolist"><li>The maximum number of keys that an app can use for data.</li></ul>
   </div>
 
     </div>
@@ -2366,7 +2466,12 @@ From interface
 
       </div>
     <div class="jd-details-descr">
-      
+      <p>
+  <p class="caution"><strong>
+      This method is deprecated.</strong><br/>
+    See <code><a href="../../../../../../reference/com/google/android/gms/appstate/AppStateManager.html#getMaxStateSize(com.google.android.gms.common.api.GoogleApiClient)">getMaxStateSize(GoogleApiClient)</a></code>.
+
+  </p>
   <div class="jd-tagdata jd-tagdescr"><p>Gets the maximum app state size per state key in bytes. Guaranteed to be at least 256 KB. May
  increase in the future.
  <p>
@@ -2375,8 +2480,7 @@ From interface
  attempted until after the client has reconnected.</p></div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Returns</h5>
-      <ul class="nolist"><li>The maximum state size that can be stored with a given state key in bytes.
-</li></ul>
+      <ul class="nolist"><li>The maximum state size that can be stored with a given state key in bytes.</li></ul>
   </div>
 
     </div>
@@ -2405,7 +2509,12 @@ From interface
 
       </div>
     <div class="jd-details-descr">
-      
+      <p>
+  <p class="caution"><strong>
+      This method is deprecated.</strong><br/>
+    See <code><a href="../../../../../../reference/com/google/android/gms/common/api/GoogleApiClient.html#isConnected()">isConnected()</a></code>.
+
+  </p>
   <div class="jd-tagdata jd-tagdescr"><p>Checks if the client is currently connected to the service, so that
  requests to other methods will succeed.  Applications should guard
  client actions caused by the user with a call to this method.</p></div>
@@ -2441,7 +2550,12 @@ From interface
 
       </div>
     <div class="jd-details-descr">
-      
+      <p>
+  <p class="caution"><strong>
+      This method is deprecated.</strong><br/>
+    See <code><a href="../../../../../../reference/com/google/android/gms/common/api/GoogleApiClient.html#isConnecting()">isConnecting()</a></code>.
+
+  </p>
   <div class="jd-tagdata jd-tagdescr"><p>Checks if the client is attempting to connect to the service.</p></div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Returns</h5>
@@ -2475,7 +2589,12 @@ From interface
 
       </div>
     <div class="jd-details-descr">
-      
+      <p>
+  <p class="caution"><strong>
+      This method is deprecated.</strong><br/>
+    See <code><a href="../../../../../../reference/com/google/android/gms/common/api/GoogleApiClient.html#isConnectionCallbacksRegistered(com.google.android.gms.common.api.GoogleApiClient.ConnectionCallbacks)">isConnectionCallbacksRegistered(GoogleApiClient.ConnectionCallbacks)</a></code>.
+
+  </p>
   <div class="jd-tagdata jd-tagdescr"><p>Returns true if the specified listener is currently registered to
  receive connection events.</p></div>
   <div class="jd-tagdata">
@@ -2519,7 +2638,12 @@ From interface
 
       </div>
     <div class="jd-details-descr">
-      
+      <p>
+  <p class="caution"><strong>
+      This method is deprecated.</strong><br/>
+    See <code><a href="../../../../../../reference/com/google/android/gms/common/api/GoogleApiClient.html#isConnectionFailedListenerRegistered(com.google.android.gms.common.api.GoogleApiClient.OnConnectionFailedListener)">isConnectionFailedListenerRegistered(GoogleApiClient.OnConnectionFailedListener)</a></code>.
+
+  </p>
   <div class="jd-tagdata jd-tagdescr"><p>Returns true if the specified listener is currently registered to
  receive connection failed events.</p></div>
   <div class="jd-tagdata">
@@ -2563,7 +2687,12 @@ From interface
 
       </div>
     <div class="jd-details-descr">
-      
+      <p>
+  <p class="caution"><strong>
+      This method is deprecated.</strong><br/>
+    See <code><a href="../../../../../../reference/com/google/android/gms/appstate/AppStateManager.html#list(com.google.android.gms.common.api.GoogleApiClient)">list(GoogleApiClient)</a></code>.
+
+  </p>
   <div class="jd-tagdata jd-tagdescr"><p>Asynchronously lists all the saved states for the current app.
  <p>
  The result is delivered to the given listener on the main thread. If <code><a href="../../../../../../reference/com/google/android/gms/appstate/AppStateClient.html#disconnect()">disconnect()</a></code> is
@@ -2574,8 +2703,7 @@ From interface
         <tr>
           <th>listener</td>
           <td>The listener that is called when the load is complete. This listener is
-            required to be non-null. The listener is called on the main thread.
-</td>
+            required to be non-null. The listener is called on the main thread.</td>
         </tr>
       </table>
   </div>
@@ -2606,7 +2734,12 @@ From interface
 
       </div>
     <div class="jd-details-descr">
-      
+      <p>
+  <p class="caution"><strong>
+      This method is deprecated.</strong><br/>
+    See <code><a href="../../../../../../reference/com/google/android/gms/appstate/AppStateManager.html#load(com.google.android.gms.common.api.GoogleApiClient, int)">load(GoogleApiClient, int)</a></code>.
+
+  </p>
   <div class="jd-tagdata jd-tagdescr"><p>Asynchronously loads saved state for the current app.
  <p>
  The result is delivered to the given listener on the main thread. If <code><a href="../../../../../../reference/com/google/android/gms/appstate/AppStateClient.html#disconnect()">disconnect()</a></code> is
@@ -2622,8 +2755,7 @@ From interface
         <tr>
           <th>stateKey</td>
           <td>The key to load data for. Must be a non-negative integer less than
-            <code><a href="../../../../../../reference/com/google/android/gms/appstate/AppStateClient.html#getMaxNumKeys()">getMaxNumKeys()</a></code>.
-</td>
+            <code><a href="../../../../../../reference/com/google/android/gms/appstate/AppStateClient.html#getMaxNumKeys()">getMaxNumKeys()</a></code>.</td>
         </tr>
       </table>
   </div>
@@ -2654,7 +2786,12 @@ From interface
 
       </div>
     <div class="jd-details-descr">
-      
+      <p>
+  <p class="caution"><strong>
+      This method is deprecated.</strong><br/>
+    See <code><a href="../../../../../../reference/com/google/android/gms/common/api/GoogleApiClient.html#reconnect()">reconnect()</a></code>
+
+  </p>
   <div class="jd-tagdata jd-tagdescr"><p>Closes the current connection to Google Play services and creates a new connection.
  <p>
  This method closes the current connection then returns immediately and reconnects to the
@@ -2696,7 +2833,12 @@ From interface
 
       </div>
     <div class="jd-details-descr">
-      
+      <p>
+  <p class="caution"><strong>
+      This method is deprecated.</strong><br/>
+    See <code><a href="../../../../../../reference/com/google/android/gms/common/api/GoogleApiClient.html#registerConnectionCallbacks(com.google.android.gms.common.api.GoogleApiClient.ConnectionCallbacks)">registerConnectionCallbacks(GoogleApiClient.ConnectionCallbacks)</a></code>.
+
+  </p>
   <div class="jd-tagdata jd-tagdescr"><p>Registers a listener to receive connection events from this <code>GooglePlayServicesClient</code>.
  If the service is already connected, the listener's <code><a href="../../../../../../reference/com/google/android/gms/common/GooglePlayServicesClient.ConnectionCallbacks.html#onConnected(android.os.Bundle)">onConnected(Bundle)</a></code>
  method will be called immediately.  Applications should balance calls to this method with
@@ -2748,7 +2890,12 @@ From interface
 
       </div>
     <div class="jd-details-descr">
-      
+      <p>
+  <p class="caution"><strong>
+      This method is deprecated.</strong><br/>
+    See <code><a href="../../../../../../reference/com/google/android/gms/common/api/GoogleApiClient.html#registerConnectionFailedListener(com.google.android.gms.common.api.GoogleApiClient.OnConnectionFailedListener)">registerConnectionFailedListener(GoogleApiClient.OnConnectionFailedListener)</a></code>.
+
+  </p>
   <div class="jd-tagdata jd-tagdescr"><p>Registers a listener to receive connection failed events from this
  <code>GooglePlayServicesClient</code>. Unlike <code><a href="../../../../../../reference/com/google/android/gms/common/GooglePlayServicesClient.html#registerConnectionCallbacks(com.google.android.gms.common.GooglePlayServicesClient.ConnectionCallbacks)">registerConnectionCallbacks(GooglePlayServicesClient.ConnectionCallbacks)</a></code>, if the service
  is not already connected, the listener's
@@ -2800,7 +2947,12 @@ From interface
 
       </div>
     <div class="jd-details-descr">
-      
+      <p>
+  <p class="caution"><strong>
+      This method is deprecated.</strong><br/>
+    See <code><a href="../../../../../../reference/com/google/android/gms/appstate/AppStateManager.html#resolve(com.google.android.gms.common.api.GoogleApiClient, int, java.lang.String, byte[])">resolve(GoogleApiClient, int, String, byte[])</a></code>.
+
+  </p>
   <div class="jd-tagdata jd-tagdescr"><p>Resolve a previously detected conflict in app state data. Note that it is still possible to
  receive a conflict callback after this call. This will occur if data on the server continues
  to change. In this case, resolution should be retried until a successful status is returned.
@@ -2830,8 +2982,7 @@ From interface
         <tr>
           <th>resolvedData</td>
           <td>Data to submit as the current data. <code>null</code> is a valid value here.
-            May be a maximum of <code><a href="../../../../../../reference/com/google/android/gms/appstate/AppStateClient.html#getMaxStateSize()">getMaxStateSize()</a></code> bytes.
-</td>
+            May be a maximum of <code><a href="../../../../../../reference/com/google/android/gms/appstate/AppStateClient.html#getMaxStateSize()">getMaxStateSize()</a></code> bytes.</td>
         </tr>
       </table>
   </div>
@@ -2862,7 +3013,12 @@ From interface
 
       </div>
     <div class="jd-details-descr">
-      
+      <p>
+  <p class="caution"><strong>
+      This method is deprecated.</strong><br/>
+    See <code><a href="../../../../../../reference/com/google/android/gms/appstate/AppStateManager.html#signOut(com.google.android.gms.common.api.GoogleApiClient)">signOut(GoogleApiClient)</a></code>.
+
+  </p>
   <div class="jd-tagdata jd-tagdescr"><p>Asynchronously signs the current user out.
  <p>
  The listener is called when sign-out is complete. If <code><a href="../../../../../../reference/com/google/android/gms/appstate/AppStateClient.html#disconnect()">disconnect()</a></code> is called before
@@ -2873,8 +3029,7 @@ From interface
         <tr>
           <th>listener</td>
           <td>The listener that is called when sign-out is complete. This listener is
-            required to be non-null. The listener is called on the main thread.
-</td>
+            required to be non-null. The listener is called on the main thread.</td>
         </tr>
       </table>
   </div>
@@ -2905,9 +3060,13 @@ From interface
 
       </div>
     <div class="jd-details-descr">
-      
-  <div class="jd-tagdata jd-tagdescr"><p>Asynchronously signs the current user out.
-</p></div>
+      <p>
+  <p class="caution"><strong>
+      This method is deprecated.</strong><br/>
+    See <code><a href="../../../../../../reference/com/google/android/gms/appstate/AppStateManager.html#signOut(com.google.android.gms.common.api.GoogleApiClient)">signOut(GoogleApiClient)</a></code>.
+
+  </p>
+  <div class="jd-tagdata jd-tagdescr"><p>Asynchronously signs the current user out.</p></div>
 
     </div>
 </div>
@@ -2935,7 +3094,12 @@ From interface
 
       </div>
     <div class="jd-details-descr">
-      
+      <p>
+  <p class="caution"><strong>
+      This method is deprecated.</strong><br/>
+    See <code><a href="../../../../../../reference/com/google/android/gms/common/api/GoogleApiClient.html#unregisterConnectionCallbacks(com.google.android.gms.common.api.GoogleApiClient.ConnectionCallbacks)">unregisterConnectionCallbacks(GoogleApiClient.ConnectionCallbacks)</a></code>.
+
+  </p>
   <div class="jd-tagdata jd-tagdescr"><p>Removes a connection listener from this <code>GooglePlayServicesClient</code>. Note that removing
  a listener does not generate any callbacks.
  <p>
@@ -2978,7 +3142,12 @@ From interface
 
       </div>
     <div class="jd-details-descr">
-      
+      <p>
+  <p class="caution"><strong>
+      This method is deprecated.</strong><br/>
+    See <code><a href="../../../../../../reference/com/google/android/gms/common/api/GoogleApiClient.html#unregisterConnectionFailedListener(com.google.android.gms.common.api.GoogleApiClient.OnConnectionFailedListener)">unregisterConnectionFailedListener(GoogleApiClient.OnConnectionFailedListener)</a></code>.
+
+  </p>
   <div class="jd-tagdata jd-tagdescr"><p>Removes a connection failed listener from the <code>GooglePlayServicesClient</code>.
  Note that removing a listener does not generate any callbacks.
  <p>
@@ -3021,7 +3190,12 @@ From interface
 
       </div>
     <div class="jd-details-descr">
-      
+      <p>
+  <p class="caution"><strong>
+      This method is deprecated.</strong><br/>
+    See <code><a href="../../../../../../reference/com/google/android/gms/appstate/AppStateManager.html#update(com.google.android.gms.common.api.GoogleApiClient, int, byte[])">update(GoogleApiClient, int, byte[])</a></code>.
+
+  </p>
   <div class="jd-tagdata jd-tagdescr"><p>Updates app state for the current app. The data provided here is developer-specified and can
  be in any format appropriate for the app. This method updates the local copy of the app state
  and syncs the changes to the server. If the local data conflicts with the data on the server,
@@ -3041,8 +3215,7 @@ From interface
         </tr>
         <tr>
           <th>data</td>
-          <td>The data to store. May be a maximum of <code><a href="../../../../../../reference/com/google/android/gms/appstate/AppStateClient.html#getMaxStateSize()">getMaxStateSize()</a></code> bytes.
-</td>
+          <td>The data to store. May be a maximum of <code><a href="../../../../../../reference/com/google/android/gms/appstate/AppStateClient.html#getMaxStateSize()">getMaxStateSize()</a></code> bytes.</td>
         </tr>
       </table>
   </div>
@@ -3073,7 +3246,12 @@ From interface
 
       </div>
     <div class="jd-details-descr">
-      
+      <p>
+  <p class="caution"><strong>
+      This method is deprecated.</strong><br/>
+    See <code><a href="../../../../../../reference/com/google/android/gms/appstate/AppStateManager.html#updateImmediate(com.google.android.gms.common.api.GoogleApiClient, int, byte[])">updateImmediate(GoogleApiClient, int, byte[])</a></code>.
+
+  </p>
   <div class="jd-tagdata jd-tagdescr"><p>Updates app state for the current app. The data provided here is developer-specified and can
  be in any format appropriate for the app. This method will attempt to update the data on the
  server immediately. The results of this operation will be delivered on the provided
@@ -3096,8 +3274,7 @@ From interface
         </tr>
         <tr>
           <th>data</td>
-          <td>The data to store. May be a maximum of <code><a href="../../../../../../reference/com/google/android/gms/appstate/AppStateClient.html#getMaxStateSize()">getMaxStateSize()</a></code> bytes.
-</td>
+          <td>The data to store. May be a maximum of <code><a href="../../../../../../reference/com/google/android/gms/appstate/AppStateClient.html#getMaxStateSize()">getMaxStateSize()</a></code> bytes.</td>
         </tr>
       </table>
   </div>

@@ -18,6 +18,7 @@ package com.google.android.gms.samples.wallet;
 
 import com.google.android.gms.wallet.MaskedWallet;
 import com.google.android.gms.wallet.MaskedWalletRequest;
+import com.google.android.gms.wallet.Wallet;
 import com.google.android.gms.wallet.WalletClient;
 import com.google.android.gms.wallet.WalletConstants;
 
@@ -149,13 +150,13 @@ public class CheckoutFragment extends XyzWalletFragment implements OnClickListen
     }
 
     private void loadMaskedWallet() {
-        if (mWalletClient.isConnected()) {
+        if (mGoogleApiClient.isConnected()) {
             mProgressDialog.show();
-            mWalletClient.loadMaskedWallet(createMaskedWalletRequest(),
+            Wallet.loadMaskedWallet(mGoogleApiClient, createMaskedWalletRequest(),
                     REQUEST_CODE_RESOLVE_LOAD_MASKED_WALLET);
         } else {
-            if (!mWalletClient.isConnected() && !mWalletClient.isConnecting()) {
-                mWalletClient.connect();
+            if (!mGoogleApiClient.isConnected() && !mGoogleApiClient.isConnecting()) {
+                mGoogleApiClient.connect();
             }
             mHandleMaskedWalletWhenReady = true;
         }
@@ -189,7 +190,7 @@ public class CheckoutFragment extends XyzWalletFragment implements OnClickListen
                 // call connect regardless of success or failure
                 // if the result was success, the connect should succeed
                 // if the result was not success, this should get a new connection result
-                mWalletClient.connect();
+                mGoogleApiClient.connect();
                 break;
             case REQUEST_CODE_RESOLVE_LOAD_MASKED_WALLET:
                 if (mProgressDialog.isShowing()) {

@@ -106,6 +106,13 @@ type="text/css">
 </script>
 <script src="../../../../../../../../assets/js/docs.js" type="text/javascript"></script>
 
+<!-- RESOURCES LIBRARY -->
+<script src="http://androiddevdocs-staging.appspot.com/ytblogger_lists_unified.js" type="text/javascript"></script>
+<script src="../../../../../../../../jd_lists_unified.js" type="text/javascript"></script>
+<script src="../../../../../../../../assets/js/jd_tag_helpers.js" type="text/javascript"></script>
+<link href="../../../../../../../../assets/css/resourcecards.css"  rel="stylesheet" type="text/css" />
+<script src="../../../../../../../../assets/js/resourcecards.js" type="text/javascript"></script>
+
 <script type="text/javascript">
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-5831155-1']);
@@ -427,6 +434,8 @@ onkeyup="return search_changed(event, false, '../../../../../../../../')" />
     <li class="api apilevel-">
   <a href="../../../../../../../../reference/com/google/android/gms/auth/package-summary.html">com.google.android.gms.auth</a></li>
     <li class="api apilevel-">
+  <a href="../../../../../../../../reference/com/google/android/gms/cast/package-summary.html">com.google.android.gms.cast</a></li>
+    <li class="api apilevel-">
   <a href="../../../../../../../../reference/com/google/android/gms/common/package-summary.html">com.google.android.gms.common</a></li>
     <li class="api apilevel-">
   <a href="../../../../../../../../reference/com/google/android/gms/common/annotation/package-summary.html">com.google.android.gms.common.annotation</a></li>
@@ -488,6 +497,8 @@ onkeyup="return search_changed(event, false, '../../../../../../../../')" />
     <li><h2>Interfaces</h2>
       <ul>
           <li class="api apilevel-"><a href="../../../../../../../../reference/com/google/android/gms/games/multiplayer/realtime/RealTimeMessageReceivedListener.html">RealTimeMessageReceivedListener</a></li>
+          <li class="api apilevel-"><a href="../../../../../../../../reference/com/google/android/gms/games/multiplayer/realtime/RealTimeMultiplayer.html">RealTimeMultiplayer</a></li>
+          <li class="api apilevel-"><a href="../../../../../../../../reference/com/google/android/gms/games/multiplayer/realtime/RealTimeMultiplayer.ReliableMessageSentCallback.html">RealTimeMultiplayer.ReliableMessageSentCallback</a></li>
           <li class="api apilevel-"><a href="../../../../../../../../reference/com/google/android/gms/games/multiplayer/realtime/RealTimeReliableMessageSentListener.html">RealTimeReliableMessageSentListener</a></li>
           <li class="selected api apilevel-"><a href="../../../../../../../../reference/com/google/android/gms/games/multiplayer/realtime/RealTimeSocket.html">RealTimeSocket</a></li>
           <li class="api apilevel-"><a href="../../../../../../../../reference/com/google/android/gms/games/multiplayer/realtime/Room.html">Room</a></li>
@@ -616,7 +627,7 @@ onkeyup="return search_changed(event, false, '../../../../../../../../')" />
 
 <h2>Class Overview</h2>
 <p itemprop="articleBody">Provides a Socket-like interface for a real-time data connection to a participant in a real-time
- room. Use getSocketForParticipant(GoogleApiClient, String, String) to get an instance.
+ room. Use <code><a href="../../../../../../../../reference/com/google/android/gms/games/multiplayer/realtime/RealTimeMultiplayer.html#getSocketForParticipant(com.google.android.gms.common.api.GoogleApiClient, java.lang.String, java.lang.String)">getSocketForParticipant(GoogleApiClient, String, String)</a></code> to get an instance.
  <p>
  Use <code><a href="../../../../../../../../reference/com/google/android/gms/games/multiplayer/realtime/RealTimeSocket.html#getParcelFileDescriptor()">getParcelFileDescriptor()</a></code> to get a file descriptor for read/write, or
  use <code><a href="../../../../../../../../reference/com/google/android/gms/games/multiplayer/realtime/RealTimeSocket.html#getInputStream()">getInputStream()</a></code> / <code><a href="../../../../../../../../reference/com/google/android/gms/games/multiplayer/realtime/RealTimeSocket.html#getOutputStream()">getOutputStream()</a></code> to get
@@ -629,7 +640,7 @@ onkeyup="return search_changed(event, false, '../../../../../../../../')" />
  The Socket-like interface provided is currently modeled on connection-based byte streams, rather
  than preserving packet semantics. That is, multiple writes may be coalesced or individual writes
  divided. Clients should avoid calling <code><a href="../../../../../../../../reference/java/io/OutputStream.html#write(byte[])">write(byte[])</a></code> with more than
- MAX_UNRELIABLE_MESSAGE_LEN bytes at a time.
+ <code><a href="../../../../../../../../reference/com/google/android/gms/games/multiplayer/Multiplayer.html#MAX_UNRELIABLE_MESSAGE_LEN">MAX_UNRELIABLE_MESSAGE_LEN</a></code> bytes at a time.
 </p>
 
 
@@ -937,7 +948,7 @@ onkeyup="return search_changed(event, false, '../../../../../../../../')" />
  <code><a href="../../../../../../../../reference/java/io/OutputStream.html#close()">close()</a></code> on the OutputStream will close the socket.
  <p>
  Note: The maximum (unfragmented) packet size supported through this API is
- MAX_UNRELIABLE_MESSAGE_LEN bytes (excluding internal protocol headers).
+ <code><a href="../../../../../../../../reference/com/google/android/gms/games/multiplayer/Multiplayer.html#MAX_UNRELIABLE_MESSAGE_LEN">MAX_UNRELIABLE_MESSAGE_LEN</a></code> bytes (excluding internal protocol headers).
  Make sure that the byte[] data passed to <code><a href="../../../../../../../../reference/java/io/OutputStream.html#write(byte[])">write(byte[])</a></code> honors this limit -
  otherwise the packet will be dropped and an error message will be sent to the log.
  <p>

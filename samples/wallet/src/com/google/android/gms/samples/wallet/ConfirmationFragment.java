@@ -16,13 +16,12 @@
 
 package com.google.android.gms.samples.wallet;
 
-import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.wallet.FullWallet;
 import com.google.android.gms.wallet.FullWalletRequest;
 import com.google.android.gms.wallet.LoyaltyWalletObject;
 import com.google.android.gms.wallet.MaskedWallet;
-import com.google.android.gms.wallet.MaskedWalletRequest;
 import com.google.android.gms.wallet.NotifyTransactionStatusRequest;
+import com.google.android.gms.wallet.Wallet;
 import com.google.android.gms.wallet.WalletClient;
 import com.google.android.gms.wallet.WalletConstants;
 
@@ -224,7 +223,7 @@ public class ConfirmationFragment extends XyzWalletFragment implements OnClickLi
         switch (requestCode) {
             case REQUEST_CODE_RESOLVE_ERR:
                 if (resultCode == Activity.RESULT_OK) {
-                    mWalletClient.connect();
+                    mGoogleApiClient.connect();
                 } else {
                     handleUnrecoverableGoogleWalletError(errorCode);
                 }
@@ -308,7 +307,7 @@ public class ConfirmationFragment extends XyzWalletFragment implements OnClickLi
         if (mConnectionResult != null) {
             resolveUnsuccessfulConnectionResult();
         } else {
-            mWalletClient.changeMaskedWallet(mMaskedWallet.getGoogleTransactionId(),
+            Wallet.changeMaskedWallet(mGoogleApiClient, mMaskedWallet.getGoogleTransactionId(),
                     mMaskedWallet.getMerchantTransactionId(),
                     REQUEST_CODE_RESOLVE_CHANGE_MASKED_WALLET);
         }
@@ -327,7 +326,7 @@ public class ConfirmationFragment extends XyzWalletFragment implements OnClickLi
     }
 
     private void getFullWallet() {
-        mWalletClient.loadFullWallet(WalletUtil.createFullWalletRequest(mItemInfo,
+        Wallet.loadFullWallet(mGoogleApiClient, WalletUtil.createFullWalletRequest(mItemInfo,
                 mMaskedWallet.getGoogleTransactionId()), REQUEST_CODE_RESOLVE_LOAD_FULL_WALLET);
     }
 
@@ -342,9 +341,9 @@ public class ConfirmationFragment extends XyzWalletFragment implements OnClickLi
         // Send back details such as fullWallet.getProxyCard() and fullWallet.getBillingAddress()
         // and get back success or failure
         // The following code assumes a successful response and calls notifyTransactionStatus
-        mWalletClient.notifyTransactionStatus(WalletUtil.createNotifyTransactionStatusRequest(
-                fullWallet.getGoogleTransactionId(),
-                NotifyTransactionStatusRequest.Status.SUCCESS));
+        Wallet.notifyTransactionStatus(mGoogleApiClient,
+                WalletUtil.createNotifyTransactionStatusRequest(fullWallet.getGoogleTransactionId(),
+                        NotifyTransactionStatusRequest.Status.SUCCESS));
 
         Intent intent = new Intent(getActivity(), OrderCompleteActivity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
